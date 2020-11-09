@@ -25,13 +25,13 @@ class LibrosTableSeeder extends Seeder
      */
     public function run()
     {
-        App\Models\Categoria::truncate(); // Evita duplicar datos
+        /* App\Models\Categoria::truncate(); // Evita duplicar datos */
 
         $categoria = new App\Models\Categoria();
         $categoria->nombre = "Categoría 1";
         $categoria->save();
 
-        App\Models\Etiqueta::truncate(); // Evita duplicar datos
+        /* App\Models\Etiqueta::truncate(); // Evita duplicar datos */
 
         $etiqueta = new App\Models\Etiqueta();
         $etiqueta->nombre = "Etiqueta 1";
@@ -41,7 +41,7 @@ class LibrosTableSeeder extends Seeder
         $etiqueta->nombre = "Etiqueta 2";
         $etiqueta->save();
 
-        App\Models\Libro::truncate(); // Evita duplicar datos
+        /* App\Models\Libro::truncate(); // Evita duplicar datos */
 
         $libro = new App\Models\Libro();
         $libro->titulo = "Mi primer libro";

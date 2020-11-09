@@ -16,8 +16,10 @@ class CreateEtiquetaLibroTable extends Migration
         /* Tabla PIVOTE */
         Schema::create('etiqueta_libro', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('libro_id');
-            $table->unsignedInteger('etiqueta_id');
+            $table->unsignedBigInteger('libro_id'); // Relación con libros
+            $table->foreign('libro_id')->references('id')->on('libros'); // clave foranea
+            $table->unsignedBigInteger('etiqueta_id'); // Relación con etiquetas
+            $table->foreign('etiqueta_id')->references('id')->on('etiquetas'); // clave foranea
             $table->timestamps();
         });
     }
