@@ -13,9 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+use App\Models\Libro;
+
 Route::get('/', function () {
-    return view('welcome');
+$libros = Libro::paginate(2);
+    return view('welcome', compact('libros'));
 });
+
+
+
+
+/* Route::get('/', function () {
+    return view('welcome');
+}); */
 
 Auth::routes();
 
