@@ -2,9 +2,6 @@
 
 namespace Database\Seeders;
 
-
-
-
 use App\Categoria;
 use App\Etiqueta;
 use App\Libro;
@@ -12,8 +9,7 @@ use App\Libro;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use App;
-
-
+use Faker\Factory;
 
 
 class LibrosTableSeeder extends Seeder
@@ -27,9 +23,16 @@ class LibrosTableSeeder extends Seeder
     {
         /* App\Models\Categoria::truncate(); // Evita duplicar datos */
 
-        $categoria = new App\Models\Categoria();
+        /* La escructura ya cambio en la v.8 */
+        /* USUARIOS */
+        App\Models\User::factory()->count(5)->create();
+
+
+        /* CATEGORIAS */
+        App\Models\Categoria::factory()->count(5)->create();
+        /* $categoria = new App\Models\Categoria();
         $categoria->nombre = "Categoría 1";
-        $categoria->save();
+        $categoria->save(); */
 
         /* App\Models\Etiqueta::truncate(); // Evita duplicar datos */
 

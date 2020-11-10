@@ -38,6 +38,7 @@
             </nav> -->
         </div>
     </div>
+    {{$libros -> links('pagination::bootstrap-4')}}
 </div>
-{{$libros -> links('pagination::bootstrap-4')}}
+
 @endsection
